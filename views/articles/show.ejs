@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Blog</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    </head>
+    <body>
+        
+        <div class="container">
+            <h1 class="mb-2"><%= article.title %></h1>
+            <div class="text-muted mb-4"><%= article.createdAt.toLocaleDateString() %></div>
+
+                <a href="/" class="btn btn-secondary">All Articles</a>
+                <a href="/articles/edit/<%= article.id %>" class="btn btn-info">Edit</a>
+            <div class="mt-4">
+                <!-- use the - instead of = to output raw html -->
+                <%- article.sanitizedHtml %>
+            </div>
+            
+            
+        </div>
+        
+
+        <script src="" async defer></script>
+    </body>
+</html>
